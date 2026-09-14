@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — Nubel</title>
+<style>
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    color: #2E3A59;
+    line-height: 1.6;
+    background: #FAFBFD;
+  }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .fecha { color: #6B7690; font-size: 14px; margin-bottom: 32px; }
+  h2 { font-size: 19px; margin-top: 36px; color: #2E3A59; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: #5B9BD5; }
+  .idioma-switch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .idioma-switch button {
+    border: 1px solid #D7DDE5;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #2E3A59;
+  }
+  .idioma-switch button.activo {
+    background: #5B9BD5;
+    color: #fff;
+    border-color: #5B9BD5;
+  }
+  #en { display: none; }
+  hr { border: none; border-top: 1px solid #E4E9F0; margin: 40px 0; }
+</style>
+</head>
+<body>
+
+<div class="idioma-switch">
+  <button id="btn-es" class="activo" onclick="mostrarIdioma('es')">Español</button>
+  <button id="btn-en" onclick="mostrarIdioma('en')">English</button>
+</div>
+
+<div id="es">
+  <h1>Política de Privacidad de Nubel</h1>
+  <p class="fecha">Última actualización: septiembre de 2026</p>
+
+  <p>Nubel es una aplicación donde las personas comparten, de forma anónima, cómo perciben el clima en su ciudad en un momento dado. Esta página explica qué información recolectamos, para qué la usamos y qué opciones tenés al respecto.</p>
+
+  <h2>Qué información recolectamos</h2>
+  <ul>
+    <li><strong>Ubicación aproximada (ciudad):</strong> con tu permiso, usamos el GPS del dispositivo para determinar el nombre de la ciudad donde te encontrás. No guardamos coordenadas exactas ni tu ubicación en tiempo real — solo el nombre de la ciudad, asociado a cada voto que registrás.</li>
+    <li><strong>Un identificador anónimo del dispositivo:</strong> al instalar la app, se genera automáticamente un código aleatorio que identifica tu dispositivo (no tu persona) dentro de nuestra base de datos. No pedimos ni recolectamos tu nombre, email, teléfono ni ningún dato que te identifique directamente.</li>
+    <li><strong>Tus votos sobre el clima:</strong> las opciones que elegís (cielo, sensación térmica, humedad) y la fecha en que las registrás.</li>
+    <li><strong>Racha de uso:</strong> cuántos días seguidos reportaste el clima, para comparar de forma anónima tu racha con la de otros usuarios.</li>
+    <li><strong>Comentarios que envíes voluntariamente:</strong> si usás la función de "Comentarios y fallos" en Ajustes, guardamos el texto que escribas junto con tu identificador anónimo de dispositivo.</li>
+  </ul>
+
+  <h2>Qué NO recolectamos</h2>
+  <ul>
+    <li>No pedimos crear una cuenta, ni nombre, ni email, ni número de teléfono.</li>
+    <li>No accedemos a tus contactos, fotos, ni a otra información del dispositivo.</li>
+    <li>No vendemos ni compartimos tu información con anunciantes.</li>
+  </ul>
+
+  <h2>Cómo usamos esta información</h2>
+  <p>La usamos exclusivamente para el funcionamiento de la app: mostrar el consenso del clima de tu ciudad y de otras ciudades, mantener tu racha e historial, y enviarte recordatorios locales (notificaciones) para que puedas seguir reportando si así lo elegís.</p>
+
+  <h2>Dónde se guarda</h2>
+  <p>Los datos se almacenan en Firebase (un servicio de Google Cloud) utilizado como base de datos de la aplicación. Google puede procesar estos datos únicamente como proveedor de infraestructura, bajo sus propias políticas de seguridad.</p>
+
+  <h2>Notificaciones</h2>
+  <p>Si aceptás el permiso correspondiente, la app puede enviarte notificaciones locales (generadas por tu propio dispositivo) recordándote reportar el clima. Podés desactivar este permiso en cualquier momento desde la configuración de tu celular.</p>
+
+  <h2>Tus opciones</h2>
+  <ul>
+    <li>Podés usar la app sin otorgar el permiso de ubicación, aunque algunas funciones (votar, ver resultados de tu ciudad) van a quedar limitadas.</li>
+    <li>Podés desactivar las notificaciones en cualquier momento.</li>
+    <li>Como no recolectamos datos identificables, no es posible vincular un pedido de eliminación de datos a una persona específica; si igualmente querés solicitar la eliminación de los datos asociados a tu dispositivo, escribinos a la dirección de contacto de abajo.</li>
+  </ul>
+
+  <h2>Menores de edad</h2>
+  <p>Nubel no está dirigida a niños ni recolecta intencionalmente información de menores de 13 años.</p>
+
+  <h2>Cambios a esta política</h2>
+  <p>Podemos actualizar esta política ocasionalmente. Los cambios importantes se reflejarán actualizando la fecha al inicio de esta página.</p>
+
+  <h2>Contacto</h2>
+  <p>Ante cualquier consulta sobre privacidad, podés escribir a: <strong>nubelcommunityweather@gmail.com</strong></p>
+</div>
+
+<div id="en">
+  <h1>Nubel Privacy Policy</h1>
+  <p class="fecha">Last updated: September 2026</p>
+
+  <p>Nubel is an app where people anonymously share how the weather feels in their city at a given moment. This page explains what information we collect, how we use it, and what choices you have.</p>
+
+  <h2>What we collect</h2>
+  <ul>
+    <li><strong>Approximate location (city):</strong> with your permission, we use the device's GPS to determine the name of the city you're in. We do not store exact coordinates or real-time location — only the city name, attached to each vote you submit.</li>
+    <li><strong>An anonymous device identifier:</strong> when you install the app, a random code is automatically generated to identify your device (not you personally) in our database. We do not ask for or collect your name, email, phone number, or any directly identifying information.</li>
+    <li><strong>Your weather votes:</strong> the options you choose (sky, feels-like temperature, humidity) and the date you submitted them.</li>
+    <li><strong>Usage streak:</strong> how many consecutive days you've reported the weather, used to anonymously compare your streak with other users.</li>
+    <li><strong>Feedback you voluntarily send:</strong> if you use the "Feedback & bugs" feature in Settings, we store the text you write along with your anonymous device identifier.</li>
+  </ul>
+
+  <h2>What we do NOT collect</h2>
+  <ul>
+    <li>We don't require creating an account, and we don't ask for your name, email, or phone number.</li>
+    <li>We don't access your contacts, photos, or other device information.</li>
+    <li>We don't sell or share your information with advertisers.</li>
+  </ul>
+
+  <h2>How we use this information</h2>
+  <p>We use it exclusively to run the app: showing the weather consensus for your city and other cities, keeping your streak and history, and sending you local reminders (notifications) so you can keep reporting if you choose to.</p>
+
+  <h2>Where it's stored</h2>
+  <p>Data is stored in Firebase (a Google Cloud service) used as the app's database. Google may process this data solely as an infrastructure provider, under its own security policies.</p>
+
+  <h2>Notifications</h2>
+  <p>If you grant the relevant permission, the app may send you local notifications (generated by your own device) reminding you to report the weather. You can disable this permission at any time from your phone's settings.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>You can use the app without granting location permission, though some features (voting, seeing your city's results) will be limited.</li>
+    <li>You can disable notifications at any time.</li>
+    <li>Since we don't collect identifiable data, we cannot link a deletion request to a specific person; if you'd still like to request deletion of data associated with your device, write to the contact address below.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Nubel is not directed at children and does not knowingly collect information from children under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy occasionally. Significant changes will be reflected by updating the date at the top of this page.</p>
+
+  <h2>Contact</h2>
+  <p>For any privacy questions, you can write to: <strong>nubelcommunityweather@gmail.com</strong></p>
+</div>
+
+<script>
+  function mostrarIdioma(idioma) {
+    document.getElementById('es').style.display = idioma === 'es' ? 'block' : 'none';
+    document.getElementById('en').style.display = idioma === 'en' ? 'block' : 'none';
+    document.getElementById('btn-es').classList.toggle('activo', idioma === 'es');
+    document.getElementById('btn-en').classList.toggle('activo', idioma === 'en');
+  }
+</script>
+
+</body>
+</html>
