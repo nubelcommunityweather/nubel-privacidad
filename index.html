@@ -59,12 +59,12 @@
 
   <h2>Qué información recolectamos</h2>
   <ul>
-    <li><strong>Ubicación aproximada:</strong> con tu permiso, usamos la ubicación aproximada del dispositivo (la app no pide la ubicación precisa) para determinar el nombre de la localidad donde te encontrás y una posición aproximada, redondeada a algo más de un kilómetro. Guardamos esa posición redondeada junto a cada reporte, para poder agrupar los reportes por zona y mostrar el resultado de tu barrio en lugar del de una ciudad entera. No guardamos tu ubicación exacta ni la seguimos en tiempo real: solo queda registrada la posición aproximada del momento en que reportás.</li>
-    <li><strong>Un identificador anónimo del dispositivo:</strong> al instalar la app se genera automáticamente un identificador anónimo, mediante el sistema de autenticación anónima de Firebase. Identifica al dispositivo, no a la persona. No pedimos ni recolectamos tu nombre, email, teléfono ni ningún dato que te identifique directamente.</li>
+    <li><strong>Ubicación aproximada:</strong> con tu permiso, usamos la ubicación aproximada del dispositivo (la app no pide la ubicación precisa) para determinar el nombre de la localidad donde te encontrás y una posición aproximada, redondeada a algo más de un kilómetro. Guardamos esa posición redondeada junto a cada reporte, para poder agrupar los reportes por zona y mostrar el resultado de tu barrio en lugar del de una ciudad entera. No guardamos tu ubicación exacta ni la seguimos en tiempo real: solo queda registrada la posición aproximada del momento en que reportás. En el directorio de localidades que permite explorar otras zonas solo figura el centro aproximado de la zona (unos 5 km), no la posición de quien reportó.</li>
+    <li><strong>Un identificador anónimo del dispositivo:</strong> al instalar la app se genera automáticamente un identificador anónimo, mediante el sistema de autenticación anónima de Firebase. Identifica al dispositivo, no a la persona. No pedimos ni recolectamos tu nombre, email, teléfono ni ningún dato que te identifique directamente. Ese identificador no se guarda junto a tus reportes: cada reporte, resumen diario, racha, alerta o comentario lleva en su lugar un código cifrado que se calcula a partir de él y que cambia de un día a otro y de una alerta a otra. Así nadie puede saber que dos reportes son de la misma persona; solo tu celular puede volver a calcular esos códigos para encontrar y borrar lo tuyo.</li>
     <li><strong>Tus reportes del clima:</strong> las opciones que elegís (cielo, sensación térmica, humedad) y la fecha en que las registrás.</li>
     <li><strong>Racha de uso:</strong> cuántos días seguidos reportaste el clima, para comparar de forma anónima tu racha con la de otros usuarios.</li>
-    <li><strong>Comentarios que envíes voluntariamente:</strong> si usás la función de "Comentarios y fallos" en Ajustes, guardamos el texto que escribas junto con tu identificador anónimo de dispositivo.</li>
-    <li><strong>Alertas que reportes:</strong> si marcás una alerta (por ejemplo, granizo o calles inundadas) o respondés si la estás viendo, guardamos tu identificador anónimo, el tipo de alerta, la zona aproximada (una celda de unos 5 km, nunca tu posición exacta) y la hora. Estos datos se usan solo para decidir si una alerta se muestra o se descarta.</li>
+    <li><strong>Comentarios que envíes voluntariamente:</strong> si usás la función de "Comentarios y fallos" en Ajustes, guardamos el texto que escribas junto con un código cifrado que solo tu celular puede usar para encontrarlo y borrarlo.</li>
+    <li><strong>Alertas que reportes:</strong> si marcás una alerta (por ejemplo, granizo o calles inundadas) o respondés si la estás viendo, guardamos un código cifrado distinto para cada alerta (no tu identificador), el tipo de alerta, la zona aproximada (una celda de unos 5 km, nunca tu posición exacta) y la hora. Estos datos se usan solo para decidir si una alerta se muestra o se descarta.</li>
     <li><strong>Temperatura de referencia:</strong> junto con el resumen diario de tus reportes guardamos la temperatura que marcaba el pronóstico en ese momento. Se usa de forma agregada, por zona, para estimar qué temperatura suele sentirse fría, templada o calurosa en cada lugar.</li>
   </ul>
 
@@ -77,7 +77,7 @@
 
   <h2>Cómo usamos esta información</h2>
   <p>La usamos exclusivamente para el funcionamiento de la app: mostrar el consenso del clima de tu ciudad y de otras ciudades, mostrar las alertas que reporta la gente de tu zona, sugerirte qué ponerte, mantener tu racha e historial, y enviarte recordatorios y avisos locales (notificaciones) si así lo elegís.</p>
-  <p>Lo que aprende la app sobre cómo sentís vos el clima (a qué temperatura solés tener frío o calor) se calcula y se guarda solo en tu celular.</p>
+  <p>Lo que aprende la app sobre cómo sentís vos el clima (a qué temperatura solés tener frío o calor), tu registro personal y tu racha se calculan y se guardan en tu celular. En nuestros servidores solo quedan los reportes y resúmenes con su código cifrado, para mostrar los resultados de cada zona y comparar rachas de forma anónima.</p>
 
   <h2>Dónde se guarda</h2>
   <p>Los datos se almacenan en Firebase (un servicio de Google Cloud) utilizado como base de datos de la aplicación. Google puede procesar estos datos únicamente como proveedor de infraestructura, bajo sus propias políticas de seguridad.</p>
@@ -97,7 +97,7 @@
   <ul>
     <li>Podés usar la app sin otorgar el permiso de ubicación: vas a poder mirar los resultados de cualquier zona, pero no vas a poder reportar, porque un reporte solo tiene valor si quien lo hace está realmente en el lugar.</li>
     <li>Podés apagar los recordatorios y los avisos de tu zona desde Ajustes, dentro de la app, o todas las notificaciones desde la configuración de tu celular.</li>
-    <li>Como no recolectamos datos identificables, no es posible vincular un pedido de eliminación de datos a una persona específica; si igualmente querés solicitar la eliminación de los datos asociados a tu dispositivo, escribinos a la dirección de contacto de abajo.</li>
+    <li>Podés borrar tus datos en cualquier momento desde Ajustes, con «Borrar mis datos»: se eliminan tus reportes, tus resúmenes diarios, tu racha, tu participación en alertas y tus comentarios, junto con el identificador anónimo y todo lo que la app guardó en tu celular. Si no podés usar la app, también podés pedirlo escribiendo a la dirección de contacto de abajo.</li>
   </ul>
 
   <h2>Menores de edad</h2>
@@ -119,12 +119,12 @@
 
   <h2>What we collect</h2>
   <ul>
-    <li><strong>Approximate location:</strong> with your permission, we use the device's approximate location (the app does not request precise location) to determine the name of the town you're in and an approximate position, rounded to a little over a kilometre. We store that rounded position alongside each report, so reports can be grouped by area and show your neighbourhood's result instead of a whole city's. We do not store your exact location or track it in real time: only the approximate position at the moment you report is recorded.</li>
-    <li><strong>An anonymous device identifier:</strong> when you install the app, an anonymous identifier is automatically generated through Firebase's anonymous authentication system. It identifies the device, not you personally. We do not ask for or collect your name, email, phone number, or any directly identifying information.</li>
+    <li><strong>Approximate location:</strong> with your permission, we use the device's approximate location (the app does not request precise location) to determine the name of the town you're in and an approximate position, rounded to a little over a kilometre. We store that rounded position alongside each report, so reports can be grouped by area and show your neighbourhood's result instead of a whole city's. We do not store your exact location or track it in real time: only the approximate position at the moment you report is recorded. The directory of towns used to explore other areas only shows the approximate centre of the area (about 5 km), not the position of whoever reported.</li>
+    <li><strong>An anonymous device identifier:</strong> when you install the app, an anonymous identifier is automatically generated through Firebase's anonymous authentication system. It identifies the device, not you personally. We do not ask for or collect your name, email, phone number, or any directly identifying information. That identifier is not stored with your reports: each report, daily summary, streak, alert or piece of feedback carries instead an encrypted code derived from it, which changes from one day to the next and from one alert to another. This way nobody can tell that two reports come from the same person; only your phone can recompute those codes to find and delete your data.</li>
     <li><strong>Your weather reports:</strong> the options you choose (sky, feels-like temperature, humidity) and the date you submitted them.</li>
     <li><strong>Usage streak:</strong> how many consecutive days you've reported the weather, used to anonymously compare your streak with other users.</li>
-    <li><strong>Feedback you voluntarily send:</strong> if you use the "Feedback & bugs" feature in Settings, we store the text you write along with your anonymous device identifier.</li>
-    <li><strong>Alerts you report:</strong> if you mark an alert (for example, hail or flooded streets) or answer whether you're seeing it, we store your anonymous identifier, the type of alert, the approximate area (a cell of about 5 km, never your exact position) and the time. This data is used only to decide whether an alert is shown or dismissed.</li>
+    <li><strong>Feedback you voluntarily send:</strong> if you use the "Feedback & bugs" feature in Settings, we store the text you write along with an encrypted code that only your phone can use to find and delete it.</li>
+    <li><strong>Alerts you report:</strong> if you mark an alert (for example, hail or flooded streets) or answer whether you're seeing it, we store a different encrypted code for each alert (not your identifier), the type of alert, the approximate area (a cell of about 5 km, never your exact position) and the time. This data is used only to decide whether an alert is shown or dismissed.</li>
     <li><strong>Reference temperature:</strong> along with the daily summary of your reports, we store the temperature the forecast showed at that moment. It's used in aggregate, by area, to estimate what temperature usually feels cold, mild or hot in each place.</li>
   </ul>
 
@@ -137,7 +137,7 @@
 
   <h2>How we use this information</h2>
   <p>We use it exclusively to run the app: showing the weather consensus for your city and other cities, showing alerts reported by people in your area, suggesting what to wear, keeping your streak and history, and sending you local reminders and notices (notifications) if you choose to.</p>
-  <p>What the app learns about how you feel the weather (at what temperature you usually feel cold or hot) is calculated and stored only on your phone.</p>
+  <p>What the app learns about how you feel the weather (at what temperature you usually feel cold or hot), your personal log and your streak are calculated and stored on your phone. Our servers only keep the reports and summaries with their encrypted code, to show each area's results and compare streaks anonymously.</p>
 
   <h2>Where it's stored</h2>
   <p>Data is stored in Firebase (a Google Cloud service) used as the app's database. Google may process this data solely as an infrastructure provider, under its own security policies.</p>
@@ -157,7 +157,7 @@
   <ul>
     <li>You can use the app without granting location permission: you'll be able to look at any area's results, but you won't be able to report, because a report is only worth something if the person making it is actually there.</li>
     <li>You can turn off reminders and alerts for your area in Settings, inside the app, or all notifications from your phone's settings.</li>
-    <li>Since we don't collect identifiable data, we cannot link a deletion request to a specific person; if you'd still like to request deletion of data associated with your device, write to the contact address below.</li>
+    <li>You can delete your data at any time from Settings, with "Delete my data": your reports, daily summaries, streak, participation in alerts and feedback are deleted, along with the anonymous identifier and everything the app stored on your phone. If you can't use the app, you can also ask by writing to the contact address below.</li>
   </ul>
 
   <h2>Children</h2>
