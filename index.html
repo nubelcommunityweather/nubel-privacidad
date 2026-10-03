@@ -52,19 +52,20 @@
 
 <div id="es">
   <h1>Política de Privacidad de Nubel</h1>
-  <p class="fecha">Última actualización: 2 de octubre de 2026</p>
+  <p class="fecha">Última actualización: 3 de octubre de 2026</p>
 
   <p>Nubel es una aplicación donde las personas comparten, de forma anónima, cómo perciben el clima en su ciudad en un momento dado. Esta página explica qué información recolectamos, para qué la usamos y qué opciones tenés al respecto.</p>
+  <p>La primera vez que abrís la app, junto al botón para empezar se muestra un aviso con enlaces a esta Política y a los Términos y Condiciones. Al tocar ese botón, aceptás ambos documentos.</p>
 
   <h2>Qué información recolectamos</h2>
   <ul>
-    <li><strong>Ubicación aproximada:</strong> con tu permiso, usamos el GPS del dispositivo para determinar el nombre de la localidad donde te encontrás y una posición aproximada, redondeada a algo más de un kilómetro. Guardamos esa posición redondeada junto a cada voto, para poder agrupar los reportes por zona y mostrar el resultado de tu barrio en lugar del de una ciudad entera. No guardamos tu ubicación exacta ni la seguimos en tiempo real: solo queda registrada la posición aproximada del momento en que votás.</li>
+    <li><strong>Ubicación aproximada:</strong> con tu permiso, usamos la ubicación aproximada del dispositivo (la app no pide la ubicación precisa) para determinar el nombre de la localidad donde te encontrás y una posición aproximada, redondeada a algo más de un kilómetro. Guardamos esa posición redondeada junto a cada reporte, para poder agrupar los reportes por zona y mostrar el resultado de tu barrio en lugar del de una ciudad entera. No guardamos tu ubicación exacta ni la seguimos en tiempo real: solo queda registrada la posición aproximada del momento en que reportás.</li>
     <li><strong>Un identificador anónimo del dispositivo:</strong> al instalar la app se genera automáticamente un identificador anónimo, mediante el sistema de autenticación anónima de Firebase. Identifica al dispositivo, no a la persona. No pedimos ni recolectamos tu nombre, email, teléfono ni ningún dato que te identifique directamente.</li>
-    <li><strong>Tus votos sobre el clima:</strong> las opciones que elegís (cielo, sensación térmica, humedad) y la fecha en que las registrás.</li>
+    <li><strong>Tus reportes del clima:</strong> las opciones que elegís (cielo, sensación térmica, humedad) y la fecha en que las registrás.</li>
     <li><strong>Racha de uso:</strong> cuántos días seguidos reportaste el clima, para comparar de forma anónima tu racha con la de otros usuarios.</li>
     <li><strong>Comentarios que envíes voluntariamente:</strong> si usás la función de "Comentarios y fallos" en Ajustes, guardamos el texto que escribas junto con tu identificador anónimo de dispositivo.</li>
     <li><strong>Alertas que reportes:</strong> si marcás una alerta (por ejemplo, granizo o calles inundadas) o respondés si la estás viendo, guardamos tu identificador anónimo, el tipo de alerta, la zona aproximada (una celda de unos 5 km, nunca tu posición exacta) y la hora. Estos datos se usan solo para decidir si una alerta se muestra o se descarta.</li>
-    <li><strong>Temperatura de referencia:</strong> junto con el resumen diario de tus votos guardamos la temperatura que marcaba el pronóstico en ese momento. Se usa de forma agregada, por zona, para estimar qué temperatura suele sentirse fría, templada o calurosa en cada lugar.</li>
+    <li><strong>Temperatura de referencia:</strong> junto con el resumen diario de tus reportes guardamos la temperatura que marcaba el pronóstico en ese momento. Se usa de forma agregada, por zona, para estimar qué temperatura suele sentirse fría, templada o calurosa en cada lugar.</li>
   </ul>
 
   <h2>Qué NO recolectamos</h2>
@@ -75,19 +76,27 @@
   </ul>
 
   <h2>Cómo usamos esta información</h2>
-  <p>La usamos exclusivamente para el funcionamiento de la app: mostrar el consenso del clima de tu ciudad y de otras ciudades, mostrar las alertas que reporta la gente de tu zona, mantener tu racha e historial, y enviarte recordatorios y avisos locales (notificaciones) si así lo elegís.</p>
+  <p>La usamos exclusivamente para el funcionamiento de la app: mostrar el consenso del clima de tu ciudad y de otras ciudades, mostrar las alertas que reporta la gente de tu zona, sugerirte qué ponerte, mantener tu racha e historial, y enviarte recordatorios y avisos locales (notificaciones) si así lo elegís.</p>
+  <p>Lo que aprende la app sobre cómo sentís vos el clima (a qué temperatura solés tener frío o calor) se calcula y se guarda solo en tu celular.</p>
 
   <h2>Dónde se guarda</h2>
   <p>Los datos se almacenan en Firebase (un servicio de Google Cloud) utilizado como base de datos de la aplicación. Google puede procesar estos datos únicamente como proveedor de infraestructura, bajo sus propias políticas de seguridad.</p>
 
+  <h2>Servicios de terceros</h2>
+  <ul>
+    <li><strong>Pronóstico oficial:</strong> para mostrarte el pronóstico de tu zona, la app consulta el servicio meteorológico público de Noruega (MET Norway, <a href="https://api.met.no/doc/TermsOfService">api.met.no</a>) enviándole la posición aproximada, redondeada a algo más de un kilómetro. Ese servicio no recibe tu identificador ni tus reportes.</li>
+    <li><strong>Nombre de tu localidad:</strong> para saber en qué localidad estás, la app usa el servicio de geocodificación del sistema operativo de tu celular (de Google en Android y de Apple en iPhone), que recibe esa posición aproximada.</li>
+    <li><strong>Actualizaciones de la app:</strong> la app consulta a los servidores de Expo si hay una versión nueva. Esa consulta solo lleva datos técnicos, como la versión de la app, el sistema operativo y un identificador técnico de la instalación; no incluye tu ubicación ni tus reportes.</li>
+  </ul>
+
   <h2>Notificaciones</h2>
-  <p>Si aceptás el permiso correspondiente, la app puede enviarte notificaciones locales (generadas por tu propio dispositivo) recordándote reportar el clima. Podés desactivar este permiso en cualquier momento desde la configuración de tu celular.</p>
-  <p>Con ese mismo permiso, la app revisa cada tanto, aun cerrada, si hay alertas confirmadas en tu zona, y te avisa con una notificación local. Para eso guarda en tu propio dispositivo (no en nuestros servidores) la zona aproximada de la última vez que abriste la app. Tu ubicación no se envía en segundo plano.</p>
+  <p>El permiso para las notificaciones se pide recién después de tu primer reporte. Si lo aceptás, la app puede enviarte notificaciones locales (generadas por tu propio dispositivo) recordándote reportar el clima. Podés apagar estos recordatorios desde Ajustes, dentro de la app, o todas las notificaciones desde la configuración de tu celular.</p>
+  <p>Con ese mismo permiso, la app revisa cada tanto, aun cerrada, si hay alertas confirmadas en tu zona, y te avisa con una notificación local. Para eso guarda en tu propio dispositivo (no en nuestros servidores) la zona aproximada de la última vez que abriste la app. Tu ubicación no se envía en segundo plano. Podés apagar estos avisos desde Ajustes, dentro de la app.</p>
 
   <h2>Tus opciones</h2>
   <ul>
-    <li>Podés usar la app sin otorgar el permiso de ubicación: vas a poder mirar los resultados de cualquier zona, pero no vas a poder votar, porque un reporte solo tiene valor si quien lo hace está realmente en el lugar.</li>
-    <li>Podés desactivar las notificaciones en cualquier momento.</li>
+    <li>Podés usar la app sin otorgar el permiso de ubicación: vas a poder mirar los resultados de cualquier zona, pero no vas a poder reportar, porque un reporte solo tiene valor si quien lo hace está realmente en el lugar.</li>
+    <li>Podés apagar los recordatorios y los avisos de tu zona desde Ajustes, dentro de la app, o todas las notificaciones desde la configuración de tu celular.</li>
     <li>Como no recolectamos datos identificables, no es posible vincular un pedido de eliminación de datos a una persona específica; si igualmente querés solicitar la eliminación de los datos asociados a tu dispositivo, escribinos a la dirección de contacto de abajo.</li>
   </ul>
 
@@ -103,19 +112,20 @@
 
 <div id="en">
   <h1>Nubel Privacy Policy</h1>
-  <p class="fecha">Last updated: 2 October 2026</p>
+  <p class="fecha">Last updated: 3 October 2026</p>
 
   <p>Nubel is an app where people anonymously share how the weather feels in their city at a given moment. This page explains what information we collect, how we use it, and what choices you have.</p>
+  <p>The first time you open the app, a notice with links to this Policy and to the Terms and Conditions is shown next to the button to get started. By tapping that button, you accept both documents.</p>
 
   <h2>What we collect</h2>
   <ul>
-    <li><strong>Approximate location:</strong> with your permission, we use the device's GPS to determine the name of the town you're in and an approximate position, rounded to a little over a kilometre. We store that rounded position alongside each vote, so reports can be grouped by area and show your neighbourhood's result instead of a whole city's. We do not store your exact location or track it in real time: only the approximate position at the moment you vote is recorded.</li>
+    <li><strong>Approximate location:</strong> with your permission, we use the device's approximate location (the app does not request precise location) to determine the name of the town you're in and an approximate position, rounded to a little over a kilometre. We store that rounded position alongside each report, so reports can be grouped by area and show your neighbourhood's result instead of a whole city's. We do not store your exact location or track it in real time: only the approximate position at the moment you report is recorded.</li>
     <li><strong>An anonymous device identifier:</strong> when you install the app, an anonymous identifier is automatically generated through Firebase's anonymous authentication system. It identifies the device, not you personally. We do not ask for or collect your name, email, phone number, or any directly identifying information.</li>
-    <li><strong>Your weather votes:</strong> the options you choose (sky, feels-like temperature, humidity) and the date you submitted them.</li>
+    <li><strong>Your weather reports:</strong> the options you choose (sky, feels-like temperature, humidity) and the date you submitted them.</li>
     <li><strong>Usage streak:</strong> how many consecutive days you've reported the weather, used to anonymously compare your streak with other users.</li>
     <li><strong>Feedback you voluntarily send:</strong> if you use the "Feedback & bugs" feature in Settings, we store the text you write along with your anonymous device identifier.</li>
     <li><strong>Alerts you report:</strong> if you mark an alert (for example, hail or flooded streets) or answer whether you're seeing it, we store your anonymous identifier, the type of alert, the approximate area (a cell of about 5 km, never your exact position) and the time. This data is used only to decide whether an alert is shown or dismissed.</li>
-    <li><strong>Reference temperature:</strong> along with the daily summary of your votes, we store the temperature the forecast showed at that moment. It's used in aggregate, by area, to estimate what temperature usually feels cold, mild or hot in each place.</li>
+    <li><strong>Reference temperature:</strong> along with the daily summary of your reports, we store the temperature the forecast showed at that moment. It's used in aggregate, by area, to estimate what temperature usually feels cold, mild or hot in each place.</li>
   </ul>
 
   <h2>What we do NOT collect</h2>
@@ -126,19 +136,27 @@
   </ul>
 
   <h2>How we use this information</h2>
-  <p>We use it exclusively to run the app: showing the weather consensus for your city and other cities, showing alerts reported by people in your area, keeping your streak and history, and sending you local reminders and notices (notifications) if you choose to.</p>
+  <p>We use it exclusively to run the app: showing the weather consensus for your city and other cities, showing alerts reported by people in your area, suggesting what to wear, keeping your streak and history, and sending you local reminders and notices (notifications) if you choose to.</p>
+  <p>What the app learns about how you feel the weather (at what temperature you usually feel cold or hot) is calculated and stored only on your phone.</p>
 
   <h2>Where it's stored</h2>
   <p>Data is stored in Firebase (a Google Cloud service) used as the app's database. Google may process this data solely as an infrastructure provider, under its own security policies.</p>
 
+  <h2>Third-party services</h2>
+  <ul>
+    <li><strong>Official forecast:</strong> to show you the forecast for your area, the app queries Norway's public weather service (MET Norway, <a href="https://api.met.no/doc/TermsOfService">api.met.no</a>), sending it the approximate position, rounded to a little over a kilometre. That service does not receive your identifier or your reports.</li>
+    <li><strong>Name of your town:</strong> to know which town you're in, the app uses your phone's operating system geocoding service (Google's on Android and Apple's on iPhone), which receives that approximate position.</li>
+    <li><strong>App updates:</strong> the app checks Expo's servers for a new version. That check only carries technical data, such as the app version, the operating system and a technical installation identifier; it does not include your location or your reports.</li>
+  </ul>
+
   <h2>Notifications</h2>
-  <p>If you grant the relevant permission, the app may send you local notifications (generated by your own device) reminding you to report the weather. You can disable this permission at any time from your phone's settings.</p>
-  <p>With that same permission, the app checks from time to time, even when closed, whether there are confirmed alerts in your area, and lets you know with a local notification. To do this, it stores on your own device (not on our servers) the approximate area from the last time you opened the app. Your location is not sent in the background.</p>
+  <p>The notification permission is only requested after your first report. If you grant it, the app may send you local notifications (generated by your own device) reminding you to report the weather. You can turn these reminders off in Settings, inside the app, or all notifications from your phone's settings.</p>
+  <p>With that same permission, the app checks from time to time, even when closed, whether there are confirmed alerts in your area, and lets you know with a local notification. To do this, it stores on your own device (not on our servers) the approximate area from the last time you opened the app. Your location is not sent in the background. You can turn these alerts off in Settings, inside the app.</p>
 
   <h2>Your choices</h2>
   <ul>
-    <li>You can use the app without granting location permission: you'll be able to look at any area's results, but you won't be able to vote, because a report is only worth something if the person making it is actually there.</li>
-    <li>You can disable notifications at any time.</li>
+    <li>You can use the app without granting location permission: you'll be able to look at any area's results, but you won't be able to report, because a report is only worth something if the person making it is actually there.</li>
+    <li>You can turn off reminders and alerts for your area in Settings, inside the app, or all notifications from your phone's settings.</li>
     <li>Since we don't collect identifiable data, we cannot link a deletion request to a specific person; if you'd still like to request deletion of data associated with your device, write to the contact address below.</li>
   </ul>
 
