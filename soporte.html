@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soporte — Nubel</title>
+<style>
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    color: #2E3A59;
+    line-height: 1.6;
+    background: #FAFBFD;
+  }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .bajada { color: #6B7690; font-size: 15px; margin-bottom: 32px; }
+  h2 { font-size: 19px; margin-top: 36px; color: #2E3A59; }
+  a { color: #5B9BD5; }
+  .contacto {
+    background: #fff;
+    border: 1px solid #D7DDE5;
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .correo { font-size: 17px; font-weight: 600; user-select: all; }
+  .idioma-switch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .idioma-switch button {
+    border: 1px solid #D7DDE5;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #2E3A59;
+  }
+  .idioma-switch button.activo {
+    background: #5B9BD5;
+    color: #fff;
+    border-color: #5B9BD5;
+  }
+  #en { display: none; }
+</style>
+</head>
+<body>
+
+<div class="idioma-switch">
+  <button id="btn-es" class="activo" onclick="mostrarIdioma('es')">Español</button>
+  <button id="btn-en" onclick="mostrarIdioma('en')">English</button>
+</div>
+
+<div id="es">
+  <h1>Soporte de Nubel</h1>
+  <p class="bajada">Nubel muestra cómo está el día ahora, según lo que reporta la gente de tu zona.</p>
+
+  <div class="contacto">
+    <p>¿Encontraste un error o tenés una pregunta? Escribinos:</p>
+    <p class="correo">nubelcommunityweather@gmail.com</p>
+    <p>También podés mandarnos un comentario desde la app, en Ajustes → Comentarios y fallos.</p>
+  </div>
+
+  <h2>¿Cómo reporto el clima?</h2>
+  <p>En Inicio, tocá «Reportar cómo está ahora», elegí cómo ves el cielo y cómo se siente, y tocá «Reportar». Tu reporte se suma al de la gente de tu zona.</p>
+
+  <h2>¿Por qué Nubel pide mi ubicación?</h2>
+  <p>Para saber en qué zona estás y sumar tu reporte al de la gente que está cerca. Nubel usa solo la ubicación aproximada, mientras usás la app, y nunca guarda tu posición exacta. Sin ubicación podés mirar otras zonas, pero no reportar.</p>
+
+  <h2>¿Las alertas de Nubel son oficiales?</h2>
+  <p>No. Las alertas las reporta la gente y aparecen cuando varias personas de una misma zona las confirman. Para avisos oficiales, consultá el servicio meteorológico de tu país. Ante una emergencia, llamá al número de emergencias de tu país.</p>
+
+  <h2>¿Cómo borro mis datos?</h2>
+  <p>En la app, andá a Ajustes → Borrar mis datos. Se borran tus reportes, tu racha, las alertas que marcaste y tus comentarios, en Nubel y en tu celular. Si no podés usar la app, escribinos al correo de arriba.</p>
+
+  <h2>¿Cómo apago las notificaciones?</h2>
+  <p>En Ajustes podés apagar los avisos de tu zona y los recordatorios por separado. También podés apagar todas las notificaciones de Nubel desde la configuración de tu celular.</p>
+
+  <h2>Más información</h2>
+  <p><a href="index.html">Política de Privacidad</a> · <a href="terminos.html">Términos y Condiciones</a></p>
+</div>
+
+<div id="en">
+  <h1>Nubel support</h1>
+  <p class="bajada">Nubel shows how the day is right now, based on what people in your area report.</p>
+
+  <div class="contacto">
+    <p>Found a bug or have a question? Write to us:</p>
+    <p class="correo">nubelcommunityweather@gmail.com</p>
+    <p>You can also send feedback from the app, in Settings → Feedback &amp; bugs.</p>
+  </div>
+
+  <h2>How do I report the weather?</h2>
+  <p>On Home, tap "Report how it is now", choose how the sky looks and how it feels, and tap "Report". Your report joins the ones from people in your area.</p>
+
+  <h2>Why does Nubel ask for my location?</h2>
+  <p>To know which area you're in and add your report to the ones from people nearby. Nubel only uses your approximate location, while you use the app, and never stores your exact position. Without location you can browse other areas, but you can't report.</p>
+
+  <h2>Are Nubel's alerts official?</h2>
+  <p>No. Alerts are reported by people and show up when several people in the same area confirm them. For official warnings, check your country's weather service. In an emergency, call your local emergency number.</p>
+
+  <h2>How do I delete my data?</h2>
+  <p>In the app, go to Settings → Delete my data. Your reports, streak, the alerts you marked and your feedback are deleted, in Nubel and on your phone. If you can't use the app, write to the address above.</p>
+
+  <h2>How do I turn off notifications?</h2>
+  <p>In Settings you can turn off alerts for your area and reminders separately. You can also turn off all Nubel notifications in your phone's settings.</p>
+
+  <h2>More information</h2>
+  <p><a href="index.html">Privacy Policy</a> · <a href="terminos.html">Terms and Conditions</a></p>
+</div>
+
+<script>
+  function mostrarIdioma(idioma) {
+    document.getElementById('es').style.display = idioma === 'es' ? 'block' : 'none';
+    document.getElementById('en').style.display = idioma === 'en' ? 'block' : 'none';
+    document.getElementById('btn-es').classList.toggle('activo', idioma === 'es');
+    document.getElementById('btn-en').classList.toggle('activo', idioma === 'en');
+  }
+  if ((navigator.language || '').slice(0, 2) !== 'es') mostrarIdioma('en');
+</script>
+
+</body>
+</html>
